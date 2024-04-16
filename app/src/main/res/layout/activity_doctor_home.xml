@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/headerbkg"
+        >
+
+        <!-- Profile picture -->
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/default_pic"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"/>
+
+        <!-- Doctor's name -->
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Archangel"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/profile_picture"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"/>
+
+        <!-- Specialty -->
+        <TextView
+            android:id="@+id/specialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cardiologist"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_below="@id/doctor_name"
+            android:layout_toEndOf="@id/profile_picture"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/doctorEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_below="@id/specialty"
+            android:layout_toEndOf="@id/profile_picture"
+            android:layout_marginStart="16dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        >
+
+        <!-- Content Layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Available Days Section -->
+            <RelativeLayout
+                android:id="@+id/available_days_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:padding="16dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/available_days_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/available_days"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Calendar view -->
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@id/available_days_title"/>
+
+                <!-- Name EditText -->
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="230dp"
+                    android:layout_height="63dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="17dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="@string/set_the_time_you_will_be_on"
+                    android:textColor="@color/black"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_below="@id/calendarView"
+                    android:layout_alignStart="@id/calendarView" />
+
+                <!-- Save Event Button -->
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="108dp"
+                    android:layout_marginTop="22dp"
+
+                    android:onClick="buttonSaveEvent"
+                    android:text="Save Event"
+                    android:textColor="@color/black"
+                    android:background="@drawable/btn_background_1"
+                    android:layout_below="@id/editText"/>
+
+            </RelativeLayout>
+
+            <!-- Requested Appointments Section -->
+            <RelativeLayout
+                android:id="@+id/requested_appointments_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/available_days_section"
+                android:background="@color/white"
+                android:padding="16dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/requested_appointments_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Requested Appointments"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- List of appointments -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/appointments_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"/>
+
+            </RelativeLayout>
+
+            <!-- Contact Patients Section -->
+            <RelativeLayout
+                android:id="@+id/contact_patients_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requested_appointments_section"
+                android:background="@color/white"
+                android:padding="16dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/contact_patients_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Patients"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Buttons to contact patients -->
+                <!-- You can add buttons or links here to contact patients -->
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

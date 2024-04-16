@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "770566056589",
+    "firebase_url": "https://pulsecare-ffac7-default-rtdb.firebaseio.com",
+    "project_id": "pulsecare-ffac7",
+    "storage_bucket": "pulsecare-ffac7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770566056589:android:ae7f4039c5e9b202da10c4",
+        "android_client_info": {
+          "package_name": "com.example.pcsuit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxJwlsF-b-aacP0S3Mdt9ipME4y4Nka78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

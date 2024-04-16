@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bluegrey"
+        tools:context=".ManageHospitals">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Manage Hospitals"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="@drawable/headerbkg"
+            android:textColor="@color/white"
+            android:gravity="center" />
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="16dp"
+        android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutHospital"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_background_1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Hospital"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteHospital"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/black"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Hospital Location -->
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextHospitalLocation"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_below="@+id/textInputLayoutHospital"
+            android:background="@drawable/btn_background_1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black"
+            android:hint="Hospital Location"
+            android:autofillHints="" />
+
+        <!-- Emergency Contact -->
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmergencyContact"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="@drawable/btn_background_1"
+            android:layout_below="@id/editTextHospitalLocation"
+            android:layout_margin="16dp"
+            android:textColor="@color/black"
+            android:hint="Emergency Contact" />
+
+        <!-- Brief Description -->
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/briefDescription"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_below="@id/editTextEmergencyContact"
+            android:background="@drawable/btn_background_1"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="16dp"
+            android:hint="Brief Description" />
+
+        <!-- Add Hospital Button -->
+        <Button
+            android:id="@+id/buttonAddHospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/briefDescription"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/bgcolor"
+            android:layout_marginLeft="120dp"
+            android:text="Add Hospital" />
+
+    </LinearLayout>
+    </ScrollView>
+
+    </RelativeLayout>

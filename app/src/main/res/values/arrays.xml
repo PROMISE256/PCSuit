@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="specialities">
+        <item>Emergency Medicine</item>
+        <item>Cardiology (heart)</item>
+        <item>Oncology (cancer)</item>
+        <item>Pediatrics (children)</item>
+        <item>Radiology (imaging)</item>
+        <item>Neurology (brain and nervous system)</item>
+        <item>Gastroenterology (digestive system)</item>
+        <item>Nephrology (kidneys)</item>
+        <item>Endocrinology (hormones)</item>
+        <item>Obstetrics and Gynecology (women\'s health)</item>
+        <item>Urology (urinary tract)</item>
+        <item>Psychiatry (mental health)</item>
+        <item>Physical Medicine and Rehabilitation</item>
+        <item>Pathology</item>
+        <item>Laboratory Medicine</item>
+        <item>Anesthesiology</item>
+        <item>Pain Management</item>
+        <item>Sleep Medicine</item>
+        <item>Ophthalmology (eyes)</item>
+        <item>Otolaryngology (ENT) (ears, nose, and throat)</item>
+        <item>Dentistry (teeth)</item>
+    </string-array>
+
+</resources>

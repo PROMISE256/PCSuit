@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PCSuit"
+        tools:targetApi="31">
+        <activity
+            android:name=".Specialties"
+            android:exported="false" />
+        <activity
+            android:name=".Doc"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorList"
+            android:exported="false" />
+        <activity
+            android:name=".Hosps"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorHome"
+            android:exported="false" />
+        <activity
+            android:name=".ManagePatients"
+            android:exported="false" />
+        <activity
+            android:name=".ManageDoctors"
+            android:exported="false" />
+        <activity
+            android:name=".ManageHospitals"
+            android:exported="false" />
+        <activity
+            android:name=".ManagePayments"
+            android:exported="false" />
+        <activity
+            android:name=".Hospital"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorLogin"
+            android:exported="false" />
+        <activity
+            android:name=".PatientHome"
+            android:exported="false" />
+        <activity
+            android:name=".PatieLogin"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AdminLogin"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHomePage"
+            android:exported="false" />
+        <activity
+            android:name=".SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+         />
+    </application>
+
+</manifest>

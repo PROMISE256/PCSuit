@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/headerbkg">
+
+        <!-- Doctor's name -->
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="31dp"
+            android:text="PulseCare"
+            android:textColor="@color/white"
+            android:textSize="38sp" />
+
+        <!-- Specialty -->
+        <TextView
+            android:id="@+id/specialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doctor_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:text="Choose your Hospital"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <!-- Hospitals List -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- First Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingEnd="8dp">
+
+                <!-- Hospital buttons for the first column -->
+                <Button
+                    android:id="@+id/hospital1_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Mbarara Regional Referral Hospital"/>
+
+                <Button
+                    android:id="@+id/hospital2_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Holy Innocents Children's Hospital"/>
+
+                <Button
+                    android:id="@+id/hospital3_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Bwindi Community Hospital"/>
+
+                <Button
+                    android:id="@+id/hospital4_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Kabale Hospital"/>
+
+                <Button
+                    android:id="@+id/hospital5_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Bellevue Hospital Limited"/>
+
+                <Button
+                    android:id="@+id/hospital6_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="St. Margherita Hospital Kasese"/>
+
+            </LinearLayout>
+
+            <!-- Second Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="8dp">
+
+                <!-- Hospital buttons for the second column -->
+                <Button
+                    android:id="@+id/hospital7_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Kampala International University Teaching Hospital (KIU)"/>
+
+                <Button
+                    android:id="@+id/hospital8_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Rugarama Hospital"/>
+
+                <Button
+                    android:id="@+id/hospital9_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Kagondo Hospital"/>
+
+                <Button
+                    android:id="@+id/hospital10_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Ishasha Clinic"/>
+
+                <Button
+                    android:id="@+id/hospital11_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Fort Portal Regional Referral Hospital"/>
+
+                <Button
+                    android:id="@+id/hospital12_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_background_1"
+                    android:text="Ruhinda Hospital"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

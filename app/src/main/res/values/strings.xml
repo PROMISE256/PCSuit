@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">PCSuit</string>
+    <string name="email">Email</string>
+    <string name="todo">TODO</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="not_registered_yet_sign_up_here">Not registered yet? Sign up here.</string>
+    <string name="select_speciality">Select Speciality</string>
+    <string name="available_days">Available Days</string>
+    <string name="set_the_time_you_will_be_on">Set the time you will be on</string>
+
+    <string-array name="hospitals">
+        <item>Mbarara Regional Referral Hospital</item>
+        <item>Kampala International University Teaching Hospital (KIU)</item>
+        <item>Holy Innocents Children\'s Hospital</item>
+        <item>Mayanja Memorial Hospital</item>
+        <item>Rugarama Hospital</item>
+        <item>Bwindi Community Hospital</item>
+        <item>Kabale Hospital</item>
+        <item>Kagondo Hospital</item>
+        <item>Kihihi Health Centre IV</item>
+        <item>Ishasha Clinic</item>
+        <item>Fort Portal Regional Referral Hospital</item>
+        <item>Kisiizi Hospital</item>
+        <item>Ruhinda Hospital</item>
+        <item>Bellevue Hospital Limited</item>
+        <item>St. Margherita Hospital Kasese</item>
+        <item>Bunyoro Health Centre IV</item>
+        <item>Buhweju Hospital</item>
+        <item>St. Francis Hospital Bundibugyo</item>
+        <item>Ruharo Hospital</item>
+    </string-array>
+
+
+</resources>
+
