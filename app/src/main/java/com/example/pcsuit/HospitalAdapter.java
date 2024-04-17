@@ -50,11 +50,10 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.MyView
             // Check if position is valid
             if (position1 != RecyclerView.NO_POSITION) {
                 HospitalData selectedHospital = filteredHospitalDataList.get(position1);
-                String selectedHospitalId = selectedHospital.getId(); // Assuming HospitalData has an getId() method
+                String selectedHospitalName = selectedHospital.getName(); // Assuming HospitalData has an getId() method
 
-                // Pass the hospital ID to DoctorList activity
-                Intent intent = new Intent(context, AdminHomePage.class);
-                intent.putExtra("selectedHospitalId", selectedHospitalId);
+                Intent intent = new Intent(context, DoctorList.class);
+                intent.putExtra("selectedHospitalName", selectedHospitalName);
                 context.startActivity(intent);
             }
         });
@@ -70,6 +69,8 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.MyView
     // Implement Filterable interface methods
     @Override
     public Filter getFilter() {
+
+
         return new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {

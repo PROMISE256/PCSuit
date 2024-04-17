@@ -8,6 +8,9 @@
     <string name="select_speciality">Select Speciality</string>
     <string name="available_days">Available Days</string>
     <string name="set_the_time_you_will_be_on">Set the time you will be on</string>
+    <string name="Todo">TODO</string>
+    <string name="search_for_hospitals">Search for hospitals</string>
+    <string name="find_your_consultant">Find Your Consultant</string>
 
     <string-array name="hospitals">
         <item>Mbarara Regional Referral Hospital</item>
