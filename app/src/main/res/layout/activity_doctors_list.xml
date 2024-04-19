@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -5,44 +6,59 @@
 
     <!-- Header -->
     <RelativeLayout
-        android:id="@+id/headerLayout"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/headerbkg"
-        android:padding="16dp">
+        android:background="@drawable/headerbkg">
 
         <!-- Title -->
+
+        <!-- Search Bar -->
+
+
+        <!-- Back Button -->
+
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Find Your Hospital"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/find_your_consultant"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <!-- Search Bar -->
         <EditText
             android:id="@+id/editTextSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textViewTitle"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Search for hospitals"
+            android:hint="Search for you doc"
             android:padding="12dp"
             android:textColorHint="@color/black"
             android:textSize="16sp" />
 
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:contentDescription="@string/Todo" />
+
     </RelativeLayout>
 
-    <!-- Hospital List -->
+    <!-- Doctors List -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewHospitals"
+        android:id="@+id/doctors_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/headerLayout"
-        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
         android:padding="16dp" />
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
 package com.example.pcsuit;
-
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Hospital extends AppCompatActivity {
+public class Hospital extends AppCompatActivity implements HospitalAdapter.HospitalClickListener {
 
     RecyclerView recyclerViewHospitals;
     EditText editTextSearch;
@@ -45,7 +45,7 @@ public class Hospital extends AppCompatActivity {
         hospitalData = new ArrayList<>();
 
         // Set up RecyclerView
-        hospitalAdapter = new HospitalAdapter(this, hospitalData);
+        hospitalAdapter = new HospitalAdapter(this, hospitalData, this); // Pass 'this' as HospitalClickListener
         recyclerViewHospitals.setAdapter(hospitalAdapter);
 
         // Read hospital data from Firebase
@@ -56,7 +56,7 @@ public class Hospital extends AppCompatActivity {
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-               //hospitalAdapter.getFilter().filter("");
+                // Not used
             }
 
             @Override
@@ -66,7 +66,7 @@ public class Hospital extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                // Not used
             }
 
         });
@@ -81,7 +81,6 @@ public class Hospital extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     HospitalData hospital = snapshot.getValue(HospitalData.class);
                     hospitalData.add(hospital);
-
                 }
                 hospitalAdapter.notifyDataSetChanged();
             }
@@ -91,5 +90,14 @@ public class Hospital extends AppCompatActivity {
                 // Handle database error
             }
         });
+    }
+
+    @Override
+    public void onHospitalClicked(String selectedHospitalId) {
+        // Handle hospital click event here
+        // For example, you can navigate to a new activity with the selected hospital ID
+        Intent intent = new Intent(this, DoctorsListActivity.class);
+        intent.putExtra("hospitalId", selectedHospitalId);
+        startActivity(intent);
     }
 }

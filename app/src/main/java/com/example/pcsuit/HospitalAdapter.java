@@ -1,11 +1,10 @@
 package com.example.pcsuit;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.content.Context;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
@@ -21,11 +20,17 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.MyView
     private final Context context;
     private final ArrayList<HospitalData> hospitalData;
     private final List<HospitalData> filteredHospitalDataList;
+    private final HospitalClickListener listener;
 
-    public HospitalAdapter(Context context, ArrayList<HospitalData> hospitalData) {
+    public interface HospitalClickListener {
+        void onHospitalClicked(String selectedHospitalId); // Method to pass selected hospital ID
+    }
+
+    public HospitalAdapter(Context context, ArrayList<HospitalData> hospitalData, HospitalClickListener listener) {
         this.context = context;
         this.hospitalData = hospitalData;
         this.filteredHospitalDataList = new ArrayList<>(hospitalData);
+        this.listener = listener;
     }
 
     @NonNull
@@ -44,22 +49,14 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.MyView
         holder.description.setText(hospitalDataItem.getDescription());
 
         holder.itemView.setOnClickListener(v -> {
-            // Get the position of the clicked item
             int position1 = holder.getAdapterPosition();
-
-            // Check if position is valid
             if (position1 != RecyclerView.NO_POSITION) {
                 HospitalData selectedHospital = filteredHospitalDataList.get(position1);
-                String selectedHospitalName = selectedHospital.getName(); // Assuming HospitalData has an getId() method
-
-                Intent intent = new Intent(context, DoctorList.class);
-                intent.putExtra("selectedHospitalName", selectedHospitalName);
-                context.startActivity(intent);
+                String selectedHospitalId = selectedHospital.getId();
+                listener.onHospitalClicked(selectedHospitalId); // Call the callback method with ID
             }
         });
-
     }
-
 
     @Override
     public int getItemCount() {
@@ -69,8 +66,6 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.MyView
     // Implement Filterable interface methods
     @Override
     public Filter getFilter() {
-
-
         return new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
@@ -89,8 +84,10 @@ public class HospitalAdapter extends RecyclerView.Adapter<HospitalAdapter.MyView
 
                 FilterResults results = new FilterResults();
                 results.values = filteredList;
+                results.count = filteredList.size(); // Make sure to set the count
                 return results;
             }
+
 
             @SuppressLint("NotifyDataSetChanged")
             @Override

@@ -46,11 +46,11 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyViewHold
             // Check if position is valid
             if (position1 != RecyclerView.NO_POSITION) {
                 Doc selectedDoctor = filteredDoctorList.get(position1);
-                String selectedDoctorId = selectedDoctor.getId();
+                String selectedUserId = selectedDoctor.getHospitalId();
 
                 // Pass the doctor ID to AdminHomePage activity
-                Intent intent = new Intent(context, AdminHomePage.class);
-                intent.putExtra("selectedDoctorId", selectedDoctorId);
+                Intent intent = new Intent(context, DoctorProfileActivity.class);
+                intent.putExtra("selectedUserId", selectedUserId);
                 context.startActivity(intent);
             }
         });

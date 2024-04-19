@@ -23,7 +23,7 @@ public class DoctorList extends AppCompatActivity {
     DoctorAdapter doctorAdapter;
     ArrayList<Doc> doctorData;
     DatabaseReference databaseReference;
-    String selectedHospitalName; // Name of the selected hospital
+    String selectedHospitalId; // Name of the selected hospital
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class DoctorList extends AppCompatActivity {
         setContentView(R.layout.activity_doctor_list);
 
         // Get the selected hospital name from the Intent
-        selectedHospitalName = getIntent().getStringExtra("selectedHospitalName");
+        selectedHospitalId = getIntent().getStringExtra("selectedHospitalId");
 
         // Initialize Firebase database reference
         databaseReference = FirebaseDatabase.getInstance().getReference("Doctors");
@@ -81,7 +81,7 @@ public class DoctorList extends AppCompatActivity {
                 doctorData.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Doc doctor = snapshot.getValue(Doc.class);
-                    if (doctor != null && doctor.getHospital().equals(selectedHospitalName)) {
+                    if (doctor != null && doctor.getHospital().equals(selectedHospitalId)) {
                         doctorData.add(doctor);
                     }
                 }

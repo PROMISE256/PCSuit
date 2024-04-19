@@ -1,14 +1,14 @@
 package com.example.pcsuit;
 
 public class Doc {
-    String name, email, speciality,hospital, id;
+    String name, email, speciality,hospital, hospitalId;
 
     public String getName() {
         return name;
     }
 
-    public String getId() {
-        return id;
+    public String getHospitalId() {
+        return hospitalId;
     }
 
     public String getHospital() {

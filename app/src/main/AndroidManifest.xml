@@ -19,6 +19,12 @@
         android:theme="@style/Theme.PCSuit"
         tools:targetApi="31">
         <activity
+            android:name=".DoctorProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorsListActivity"
+            android:exported="false" />
+        <activity
             android:name=".Specialties"
             android:exported="false" />
         <activity
@@ -80,8 +86,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"
-         />
+            android:exported="false" />
     </application>
 
 </manifest>
