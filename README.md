@@ -1,0 +1,1 @@
+Pulsecare is a telemedicine app that enables patients talk to doctors through video voice call and messages. There is setting reminders. video voice call and messaging are enabled by use of zego cloud. the database is real time firebase
